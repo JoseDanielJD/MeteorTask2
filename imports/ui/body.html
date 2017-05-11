@@ -1,0 +1,22 @@
+<body>
+    <header>
+        <div class="hero">
+            {{#each Titles}}
+                {{> Title}} 
+            {{/each}}
+        </div>
+    </header>
+        <ul>
+      {{#each Questions}}
+        {{> question}} 
+      {{/each}}
+    </ul>
+</body>
+
+<template name="question">
+  <li>{{TextQ}}</li>
+</template>
+
+<template name="Title">
+  <div>{{TextT}}</div>
+</template>

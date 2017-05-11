@@ -1,1 +1,28 @@
-/* CSS declarations go here */
+.hero {   
+  background-color: rgba(116, 243, 235, 0.83);
+  position: relative;
+  height: 263px;
+  width: 100%;
+  color:white;
+}
+
+
+.hero:after {
+  border-right: solid 30px transparent;
+  border-left: solid 30px transparent;
+  border-top: solid 26px rgba(116, 243, 235, 0.83);
+  transform: translateX(-50%);
+  position: absolute;
+  z-index: -1;
+  content: '';
+  top: 100%;
+  left: 20%;
+  height: 0;
+  width: 0;
+}
+
+body{
+  color:white;
+  background: black;
+  margin: 0;
+}
