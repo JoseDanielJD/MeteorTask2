@@ -1,23 +1,31 @@
 <body>
     <header>
         <div class="hero">
-            {{#each Titles}}
+            {{#each  Questions 1}}
                 {{> Title}} 
+                {{> SubTitle}} 
             {{/each}}
         </div>
     </header>
-        <ul>
-      {{#each Questions}}
-        {{> question}} 
-      {{/each}}
+    <ul>
+        <form>
+            {{#each Questions}}
+                {{> question}} 
+            {{/each}}
+            <input type="button" value="Click">
+        </form>
     </ul>
     {{>navigate}}
 </body>
 
 <template name="question">
-  <li>{{TextQ}}</li>
+    <input type="radio" name="name" value="value">{{TextQ}}<br>
 </template>
 
 <template name="Title">
-  <div>{{TextT}}</div>
+  {{TextT}}
+</template>
+
+<template name="SubTitle">
+  <h5>{{TextST}}</h5>
 </template>
