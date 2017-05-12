@@ -2,8 +2,8 @@ import { Template } from 'meteor/templating';
 import './navigate.js'; 
 import './body.html';
 
-ActualGroup = 2;
-
+ActualGroupAux = 0;
+ActualGroup = new ReactiveVar(0); //make a reactive var, to refresh the helper Every time it change
 Template.body.helpers({
   Titles: [
     { 
@@ -11,8 +11,8 @@ Template.body.helpers({
     },
   ],
   Questions(){
-    console.log("actualgroup: ",ActualGroup);
-    return TextQuestions.find({group: ActualGroup});
+      console.log("actualgroup: ",ActualGroup);
+      CambioPreguntas=false;
+      return TextQuestions.find({group: ActualGroup.get()}); //make a reactive var, to refresh the helper Every time it change
   }
 });
-

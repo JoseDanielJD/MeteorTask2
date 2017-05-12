@@ -1,4 +1,4 @@
-//TextQuestions.remove({});//while test
+TextQuestions.remove({});//while test
 
 if (TextQuestions.find().count() === 0) {
   TextQuestions.insert({
@@ -45,5 +45,45 @@ if (TextQuestions.find().count() === 0) {
     TextQ: 'question 8',
     value: 1,
     group: 2    
+  });
+    TextQuestions.insert({
+    TextQ: 'question 9',
+    value: 1,
+    group: 3
+  });  
+  TextQuestions.insert({
+    TextQ: 'question 10',
+    value: 1,
+    group: 3   
+  });  
+  TextQuestions.insert({
+    TextQ: 'question 11',
+    value: 1,
+    group: 3  
+  }); 
+  TextQuestions.insert({
+    TextQ: 'question 12',
+    value: 1,
+    group: 3    
+  });
+    TextQuestions.insert({
+    TextQ: 'question 13',
+    value: 1,
+    group: 4
+  });  
+  TextQuestions.insert({
+    TextQ: 'question 14',
+    value: 1,
+    group: 4    
+  });  
+  TextQuestions.insert({
+    TextQ: 'question 15',
+    value: 1,
+    group: 4   
+  }); 
+  TextQuestions.insert({
+    TextQ: 'question 16',
+    value: 1,
+    group: 4   
   });
 }
