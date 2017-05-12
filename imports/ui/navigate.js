@@ -3,14 +3,14 @@ import './navigate.html';
 
 Template.navigate.events({
   'click .next'(event) {
-    console.log("in: "+ActualGroup.get()+" Go next");
     ActualGroupAux++;
     ActualGroup.set(ActualGroupAux);//select the group of question to render
   },
   'click .prev'(event) {
-    console.log("in: "+ActualGroup.get()+" Go prev");
+    Accum = Accum - preValue; //remove preValue of accumulate
     ActualGroupAux--;
     ActualGroup.set(ActualGroupAux);//select the group of question to render
+    console.log("Previus Accumulate: ",Accum);  
   },
 });
 

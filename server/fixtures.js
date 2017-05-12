@@ -1,4 +1,4 @@
-TextQuestions.remove({});//while test
+//TextQuestions.remove({});//while test
 
 if (TextQuestions.find().count() === 0) {
   TextQuestions.insert({

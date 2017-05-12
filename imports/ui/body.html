@@ -8,18 +8,19 @@
         </div>
     </header>
     <ul>
-        <form>
+        <form class="new-questions">
             {{#each Questions}}
                 {{> question}} 
             {{/each}}
-            <input type="button" value="Click">
+            <input type="button" class="pre-questions" name="pre-questions" value="Prev">
+            <input type="submit" name="new-questions" value="Next">
         </form>
     </ul>
-    {{>navigate}}
+    <!--{{>navigate}}-->
 </body>
 
 <template name="question">
-    <input type="radio" name="name" value="value">{{TextQ}}<br>
+    <input class="posttext" type="radio" name="singleQuestion" value={{value}} >{{TextQ}}<br>
 </template>
 
 <template name="Title">
